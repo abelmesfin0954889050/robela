@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4e9dd6; /* Customizable background color */
+}
+
+.paper {
+  width: 100%; /* Allow the paper to take full width */
+  max-width: 600px; /* Maximum width for larger screens */
+  height: auto; /* Let the height adjust based on content */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.note {
+  font-family: 'Arial', sans-serif; /* New font family for modern look */
+  font-weight: bold; /* Make the text bold */
+  font-size: 20px; /* Adjust font size */
+  color: #333;
+  line-height: 1.6; /* Increase line height for paragraph-like appearance */
+  text-align: justify; /* Justify the text for a paragraph feel */
+  word-wrap: break-word; /* Break words if necessary */
+  white-space: pre-wrap; /* Allow text to wrap onto the next line */
+  overflow-wrap: break-word;
+}
+
+#bio-text {
+  display: inline-block;
+  border-right: 3px solid #333;
+  padding-right: 5px;
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .paper {
+    max-width: 90%; /* Allow more flexibility on mobile */
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  .note {
+    font-size: 18px; /* Adjust font size for mobile */
+    font-family: 'Arial', sans-serif; /* New font family for modern look */
+
+  }
+
+  #bio-text {
+    font-size: 16px; /* Adjust text size inside the typing animation */
+  }
+}
